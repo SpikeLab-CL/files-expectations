@@ -1,0 +1,10 @@
+*.txt
+*.json
+*.pyc
+vscode/
+.vscode/
+.vscode
+__pycache__/
+env/
+.ipynb_checkpoints/
+.DS_Store
