@@ -13,7 +13,7 @@ def pre_process_args(args):
     return expectations, input_files, columns
 
 def open_expectations(file_path):
-    logging.info(" Trying to load expectations from {0}".format(file_path))
+    logging.info("Trying to load expectations from {0}".format(file_path))
     try:
         if(os.path.isfile(file_path)):
             with open(file_path) as file:
@@ -47,10 +47,10 @@ def write_results(expectations, success=True):
     r['expectations'] = expectations
     if success:
         file_name = "{0}/successful_results_{1}.json".format(os.getcwd(), now)
-        logging.info(" Writing full successfull expectations in {0}".format(file_name))
+        logging.info("Writing full successfull expectations in {0}".format(file_name))
     else:
         file_name = "{0}/failed_results_{1}.json".format(os.getcwd(), now)
-        logging.info(" Writing failed expectations in {0}".format(file_name))
+        logging.info("Writing failed expectations in {0}".format(file_name))
     f = open(file_name, "w+")
     f.write(json.dumps(r, indent=4,))
     f.close()
